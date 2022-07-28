@@ -21,6 +21,9 @@ jobs:
       with:
         java-version: '8.0'
         distribution: 'temurin'
+    - name: Set Home
+      run: ant -Dj2ee.server.home='/home/runner/work/HappyVege/ProduceManagement/build.xml'
+      
     - name: Build with Ant
       run: ant -noinput -buildfile build.xml
     - name: Distribute jar-war file # Gửi file .jar .war đi đâu, CD nhảy vào ...
